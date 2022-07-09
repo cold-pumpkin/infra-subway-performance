@@ -17,8 +17,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // 모든 정적 자원에 대해 no-cache & private 설정
-        registry.addResourceHandler(PREFIX_STATIC_RESOURCES + "/static/js/**")
-                .addResourceLocations("classpath:/static/js/")
+        registry.addResourceHandler(PREFIX_STATIC_RESOURCES + "/static/**")
+                .addResourceLocations("classpath:/static/")
                 .setCacheControl(CacheControl.noCache().cachePrivate());
 
         // css : max-age 1년
